@@ -1,0 +1,9 @@
+.message {
+    font-weight: 700;
+    padding: 10px;
+    border: 0.1px solid gray;
+}
+
+.message button {
+    float: right;
+}
