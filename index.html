@@ -15,7 +15,10 @@
     
 	<h2>I am working in this App Wait please :)</h2>
 	
-	<video src="https://archive.org/download/society.-s-01-e-05.720p/Society.S01E05.720p.Hindi.Eng.Vegamovies.NL.mp4" width="100%" controls></video>
+	<video id="myVideo" src="https://archive.org/download/society.-s-01-e-05.720p/Society.S01E05.720p.Hindi.Eng.Vegamovies.NL.mp4" width="100%" controls></video>
+	
+	<button id="fullscreenButton">Fullscreen</button>
+
 	
 	<a href="project.html">PROJECT</a>
 	
@@ -33,6 +36,19 @@
 
 
     <script src="js/message.js"></script>
+	<script>const video = document.getElementById('myVideo');
+const fullscreenButton = document.getElementById('fullscreenButton');
+
+fullscreenButton.addEventListener('click', () => {
+  if (video.requestFullscreen) {
+    video.requestFullscreen();
+  } else if (video.webkitRequestFullscreen) { /* Safari */
+    video.webkitRequestFullscreen();
+  } else if (video.msRequestFullscreen) { /* IE11 */
+    video.msRequestFullscreen();
+  }
+});
+</script>
 </body>
 
 </html>
